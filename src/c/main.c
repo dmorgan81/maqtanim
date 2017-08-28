@@ -1,15 +1,23 @@
 #include <pebble.h>
 #include "logging.h"
+#include "hour-layer.h"
 
 static Window *s_window;
+static HourLayer *s_hour_layer;
 
 static void prv_window_load(Window *window) {
     logf();
+    Layer *root_layer = window_get_root_layer(window);
+
+    s_hour_layer = hour_layer_create(GPoint(100, 0));
+    layer_add_child(root_layer, s_hour_layer);
+
     window_set_background_color(window, GColorBlack);
 }
 
 static void prv_window_unload(Window *window) {
     logf();
+    hour_layer_destroy(s_hour_layer);
 }
 
 static void prv_init(void) {

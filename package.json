@@ -2,9 +2,14 @@
   "name": "maqtanim",
   "author": "David Morgan",
   "version": "1.0.0",
-  "keywords": ["pebble-app"],
+  "keywords": [
+    "pebble-app"
+  ],
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "pebble-events": "^1.2.0",
+    "pebble-fctx": "^1.6.2"
+  },
   "pebble": {
     "displayName": "maqtanim",
     "uuid": "a496174d-75b0-479c-8451-d9757255f531",
@@ -21,7 +26,16 @@
     },
     "messageKeys": [],
     "resources": {
-      "media": []
+      "media": [
+        {
+          "type": "raw",
+          "name": "ROBOTO_FFONT",
+          "file": "Roboto-Regular.ffont"
+        }
+      ]
     }
+  },
+  "devDependencies": {
+    "pebble-fctx-compiler": "^1.2.2"
   }
 }

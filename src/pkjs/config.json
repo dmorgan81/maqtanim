@@ -3,6 +3,14 @@
         "type": "section",
         "items": [
             {
+                "type": "color",
+                "messageKey": "COLOR_ACCENT",
+                "label": "Accent color",
+                "defaultValue": "FFFF00",
+                "sunlight": false,
+                "capabilities": [ "COLOR" ]
+            },
+            {
                 "type": "toggle",
                 "messageKey": "HOURLY_VIBE",
                 "label": "Vibrate on the Hour",

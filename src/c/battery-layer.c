@@ -1,5 +1,6 @@
 #include <pebble.h>
 #include <pebble-events/pebble-events.h>
+#include "colors.h"
 #include "logging.h"
 #include "battery-layer.h"
 
@@ -16,7 +17,7 @@ static void prv_update_proc(BatteryLayer *this, GContext *ctx) {
     uint8_t w = bounds.size.w * data->charge_state.charge_percent / 100;
     uint8_t x = (bounds.size.w - w) / 2;
 
-    graphics_context_set_stroke_color(ctx, PBL_IF_COLOR_ELSE(GColorYellow, GColorWhite));
+    graphics_context_set_stroke_color(ctx, colors_get_accent_color());
     graphics_context_set_stroke_width(ctx, 2);
     graphics_draw_line(ctx, GPoint(x, 0), GPoint(x + w, 0));
 }

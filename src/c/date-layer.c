@@ -3,6 +3,7 @@
 #include <pebble-fctx/fctx.h>
 #include <pebble-fctx/ffont.h>
 #include <ctype.h>
+#include "colors.h"
 #include "logging.h"
 #include "date-layer.h"
 
@@ -33,7 +34,7 @@ static void prv_update_proc(DateLayer *this, GContext *ctx) {
     fixed_t sides = (INT_TO_FIXED(PBL_DISPLAY_WIDTH) - str_width) / 2;
 
     fctx_set_offset(&fctx, FPoint(sides, INT_TO_FIXED(frame.origin.y)));
-    fctx_set_fill_color(&fctx, PBL_IF_COLOR_ELSE(GColorYellow, GColorWhite));
+    fctx_set_fill_color(&fctx, colors_get_accent_color());
 
     strftime(s, sizeof(s), "%b %d ", &data->tick_time);
     strupp(s);

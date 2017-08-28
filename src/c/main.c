@@ -25,6 +25,8 @@ static void prv_settings_received_handler(void *context) {
     connection_vibes_enable_health(enamel_get_ENABLE_HEALTH());
     hourly_vibes_enable_health(enamel_get_ENABLE_HEALTH());
 #endif
+
+    layer_mark_dirty(window_get_root_layer(s_window));
 }
 
 static void prv_window_load(Window *window) {

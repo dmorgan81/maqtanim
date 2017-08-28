@@ -30,7 +30,8 @@
     "messageKeys": [
       "HOURLY_VIBE",
       "CONNECTION_VIBE",
-      "ENABLE_HEALTH"
+      "ENABLE_HEALTH",
+      "COLOR_ACCENT"
     ],
     "resources": {
       "media": [

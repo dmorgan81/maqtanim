@@ -2,6 +2,7 @@
 #include <pebble-events/pebble-events.h>
 #include <pebble-fctx/fctx.h>
 #include <pebble-fctx/ffont.h>
+#include "colors.h"
 #include "logging.h"
 #include "minute-layer.h"
 
@@ -20,7 +21,7 @@ static void prv_update_proc(MinuteLayer *this, GContext *ctx) {
     fctx_init_context(&fctx, ctx);
 
     fctx_set_offset(&fctx, g2fpoint(frame.origin));
-    fctx_set_fill_color(&fctx, PBL_IF_COLOR_ELSE(GColorYellow, GColorWhite));
+    fctx_set_fill_color(&fctx, colors_get_accent_color());
     fctx_set_text_em_height(&fctx, font, 25);
 
     char s[3];

@@ -33,10 +33,10 @@ static void prv_window_load(Window *window) {
     logf();
     Layer *root_layer = window_get_root_layer(window);
 
-    s_hour_layer = hour_layer_create(GPoint(90, 35));
+    s_hour_layer = hour_layer_create(GPoint(PBL_IF_RECT_ELSE(90, 108), 35));
     layer_add_child(root_layer, s_hour_layer);
 
-    s_minute_layer = minute_layer_create(GPoint(122, 45));
+    s_minute_layer = minute_layer_create(GPoint(PBL_IF_RECT_ELSE(122, 140), 45));
     layer_add_child(root_layer, s_minute_layer);
 
     s_battery_layer = battery_layer_create(GRect(12, 100, PBL_DISPLAY_WIDTH - 24, 2));

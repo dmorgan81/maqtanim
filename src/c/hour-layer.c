@@ -24,7 +24,7 @@ static void prv_update_proc(HourLayer *this, GContext *ctx) {
     fctx_set_text_em_height(&fctx, font, 72);
 
     char s[3];
-    strftime(s, sizeof(s), clock_is_24h_style() ? "%k" : "%l", &data->tick_time);
+    strftime(s, sizeof(s), clock_is_24h_style() ? "%H" : "%I", &data->tick_time);
 
     fctx_begin_fill(&fctx);
     fctx_draw_string(&fctx, s, font, GTextAlignmentRight, FTextAnchorTop);
@@ -37,7 +37,7 @@ static void prv_update_proc(HourLayer *this, GContext *ctx) {
 static void prv_tick_handler(struct tm *tick_time, TimeUnits units_changed, void *this) {
     logf();
     Data *data = layer_get_data(this);
-    memcpy(&data->tick_time, tick_time, sizeof(struct tm));;
+    memcpy(&data->tick_time, tick_time, sizeof(struct tm));
     layer_mark_dirty(this);
 }
 

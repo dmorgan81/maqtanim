@@ -29,11 +29,6 @@
       "media": [
         {
           "type": "raw",
-          "name": "ROBOTO_FFONT",
-          "file": "Roboto-Regular.ffont"
-        },
-        {
-          "type": "raw",
           "name": "ROBOTO_CONDENSED_FFONT",
           "file": "RobotoCondensed-Regular.ffont"
         }

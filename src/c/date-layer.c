@@ -19,12 +19,12 @@ static void prv_update_proc(DateLayer *this, GContext *ctx) {
     logf();
     GRect frame = layer_get_frame(this);
     Data *data = layer_get_data(this);
-    FFont *font = ffont_create_from_resource(RESOURCE_ID_ROBOTO_FFONT);
+    FFont *font = ffont_create_from_resource(RESOURCE_ID_ROBOTO_CONDENSED_FFONT);
 
     FContext fctx;
     fctx_init_context(&fctx, ctx);
 
-    fctx_set_text_em_height(&fctx, font, 20);
+    fctx_set_text_em_height(&fctx, font, 18);
 
     char s[11];
     strftime(s, sizeof(s), "%b %d %a", &data->tick_time);

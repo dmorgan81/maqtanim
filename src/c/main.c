@@ -15,16 +15,16 @@ static void prv_window_load(Window *window) {
     logf();
     Layer *root_layer = window_get_root_layer(window);
 
-    s_hour_layer = hour_layer_create(GPoint(86, 0));
+    s_hour_layer = hour_layer_create(GPoint(90, 35));
     layer_add_child(root_layer, s_hour_layer);
 
-    s_minute_layer = minute_layer_create(GPoint(126, 10));
+    s_minute_layer = minute_layer_create(GPoint(122, 45));
     layer_add_child(root_layer, s_minute_layer);
 
     s_battery_layer = battery_layer_create(GRect(12, 100, PBL_DISPLAY_WIDTH - 24, 2));
     layer_add_child(root_layer, s_battery_layer);
 
-    s_date_layer = date_layer_create(GPoint(0, 120));
+    s_date_layer = date_layer_create(GPoint(0, 110));
     layer_add_child(root_layer, s_date_layer);
 
     window_set_background_color(window, GColorBlack);

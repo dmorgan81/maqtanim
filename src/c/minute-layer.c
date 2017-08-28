@@ -14,7 +14,7 @@ static void prv_update_proc(MinuteLayer *this, GContext *ctx) {
     logf();
     GRect frame = layer_get_frame(this);
     Data *data = layer_get_data(this);
-    FFont *font = ffont_create_from_resource(RESOURCE_ID_ROBOTO_FFONT);
+    FFont *font = ffont_create_from_resource(RESOURCE_ID_ROBOTO_CONDENSED_FFONT);
 
     FContext fctx;
     fctx_init_context(&fctx, ctx);
